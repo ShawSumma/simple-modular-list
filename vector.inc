@@ -37,13 +37,13 @@ static inline void LIST(push) (LIST(t) *vec, ELEM elem) {
     vec->data[pos] = elem;
 }
 
-static inline ELEM LIST(index) (LIST(t) *vec, size_t index) {
+static inline ELEM *LIST(index) (LIST(t) *vec, size_t index) {
     #if defined(SAFE)
         if (index >= vec->len) {
             SAFE("OUT OF BOUNDS %zu", index);
         }
     #endif
-    return vec->data[index];
+    return &vec->data[index];
 }
 
 static inline ELEM LIST(pop) (LIST(t) *vec) {
