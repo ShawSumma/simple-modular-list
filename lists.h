@@ -13,6 +13,10 @@
 #define LIST(x) list_obj_ ## x
 #include "vector.inc"
 
+#define ELEM float
+#define LIST(x) list_float_ ## x
+#include "vector.inc"
+
 #define list(T) list_ ## T ## _t
 #define list_new(T) list_ ## T ## _new()
 #define list_delete(T, v) list_ ## T ## _delete(v)
