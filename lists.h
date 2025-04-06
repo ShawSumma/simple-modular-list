@@ -1,21 +1,20 @@
 
 #pragma once
 
-#define VECTOR
 #define SAFE(...) (fprintf(stderr, __VA_ARGS__), fprintf(stderr, "\n"), exit(1))
 
 // int list
 #define ELEM int
 #define LIST(x) list_int_ ## x 
-#include "vector.inc"
+#include "lists.inc"
 
 #define ELEM void *
 #define LIST(x) list_obj_ ## x
-#include "vector.inc"
+#include "lists.inc"
 
 #define ELEM float
 #define LIST(x) list_float_ ## x
-#include "vector.inc"
+#include "lists.inc"
 
 #define list(T) list_ ## T ## _t
 #define list_new(T) list_ ## T ## _new()

@@ -1,8 +1,6 @@
 
 #include "lists.h"
 
-#include <stdlib.h>
-
 int main() {
     list(int) x = list_new(int);
 
